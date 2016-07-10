@@ -1,0 +1,9 @@
+<h1> publicações do site </h1>
+
+<% @publications.each do |publication| %>
+  <h1><%= publication.category.try(:name) %> </h1><br>
+  <%= publication.title %> <br>
+  <%= publication.description %> <br>
+  <%= image_tag(publication.publication_image, size: '100') %> <br>
+  ___________________________________
+<% end %>
