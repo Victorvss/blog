@@ -12,7 +12,7 @@
 
 <p>
   <strong>Publication image:</strong>
-  <%= @publication.publication_image %>
+  <%= image_tag(@publication.publication_image , size: "150") %>
 </p>
 
 <%= link_to 'Edit', edit_publication_path(@publication) %> |

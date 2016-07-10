@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "publications#index"
   resources :categories
   resources :publications
   # The priority is based upon order of creation: first created -> highest priority.
