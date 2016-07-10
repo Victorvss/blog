@@ -53,6 +53,6 @@ class PublicationsController < ApplicationController
 
 
     def publication_params
-      params.require(:publication).permit(:title, :description, :publication_image)
+      params.require(:publication).permit(:title, :description, :publication_image, :category_id)
     end
 end

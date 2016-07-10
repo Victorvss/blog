@@ -8,6 +8,7 @@
       <th>Title</th>
       <th>Description</th>
       <th>Publication image</th>
+      <th>categoria</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +19,10 @@
         <td><%= publication.title %></td>
         <td><%= publication.description %></td>
         <td><%= image_tag(publication.publication_image , size: "50") %></td>
-        <td><%= link_to 'Show', publication %></td>
-        <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
-        <td><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= publication.category.try( :name) %></td>
+        <td><%= link_to 'Mostrar', publication %></td>
+        <td><%= link_to 'Editar', edit_publication_path(publication) %></td>
+        <td><%= link_to 'Deletar', publication, method: :delete, data: { confirm: 'Deseja mesmo apagar?' } %></td>
       </tr>
     <% end %>
   </tbody>
